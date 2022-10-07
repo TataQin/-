@@ -1,0 +1,33 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>浏览器模块化CMD: sea.js</title>
+</head>
+<body>
+  <script src="./js/lodash.js"></script>
+  <script src="./sea.js"></script>
+  <script>
+    // 配置
+    seajs.config({
+      base: './', // 后续引用基于此路径
+      alias: {  // 别名，可以用一个名称 替代路径（基于base路径）
+        lodash: 'js/lodash.js',
+        m1: 'js/m1',
+        m2: 'js/m2',
+      },
+    });
+
+    // 加载入口模块
+    seajs.use("./main.js", function(main) {
+      // 执行完 main.js导出(exports/module.exports)之前的同步操作之后的 回调
+      main.init(); // init
+    });
+
+  </script>
+</body>
+</html>

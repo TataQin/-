@@ -1,0 +1,49 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>浏览器模块化CMD: sea.js</title>
+  <style>
+    /* .outer::after { 
+    content: '';
+    display: block;
+    clear: both;
+    }
+    .left {
+        float: left;
+        width: 200px;
+        background-color: red;
+        height: 40px;
+    }
+    .right {
+        margin-left: 200px;
+        height: 40px;
+        background-color: blue;
+    } */
+    .outer {
+    display: flex;
+    }
+    .left {
+    width: 200px;
+    height: 100%;
+    background: lightcoral;
+    }
+    .right {
+    flex-grow: 1;
+    background: lightseagreen;
+    }
+  </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="left">左侧</div>
+        <div class="right">右侧</div>
+    </div>
+      
+
+</body>
+</html>
